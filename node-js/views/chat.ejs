@@ -1,0 +1,21 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="/public/style.css"><title>Chat</title></head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <div class="top"><strong><%= user.first_name %></strong><form method="post" action="/logout"><button>Logout</button></form></div>
+    <div id="wsStatus" class="status connecting">درحال اتصال...</div>
+    <h3>Conversations</h3>
+    <div id="conversations"></div>
+    <h3>Users</h3>
+    <div id="users"></div>
+    <% if (user.is_admin) { %><a class="admin-link" href="/admin">Admin panel</a><% } %>
+  </aside>
+  <main class="chat-main">
+    <div id="replyBox" class="reply-box hidden"></div>
+    <div id="messages" class="messages"></div>
+    <form id="chatForm" class="composer"><input id="messageInput" placeholder="پیام بنویسید..." autocomplete="off"><button>➤</button></form>
+  </main>
+</div>
+<script>window.APP_USER = <%- JSON.stringify(user) %>;</script>
+<script src="/public/chat.js"></script>
+</body></html>

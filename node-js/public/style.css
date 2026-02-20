@@ -1,0 +1,16 @@
+*{box-sizing:border-box;font-family:Arial,sans-serif}body{margin:0;background:#f7f7f7}
+.layout{display:flex;min-height:100vh}
+.sidebar{width:320px;background:#fff;padding:16px;border-right:1px solid #ddd;overflow:auto}
+.chat-main{flex:1;display:flex;flex-direction:column}
+.top{display:flex;justify-content:space-between;align-items:center}
+.status{margin:8px 0;padding:6px;border-radius:8px;font-size:13px}.status.connected{background:#daf5df}.status.connecting{background:#fff2bf}.status.disconnected{background:#ffd6d6}
+#conversations button,#users button{width:100%;text-align:left;padding:8px;margin:4px 0;border:1px solid #ddd;background:white;border-radius:8px}
+.messages{flex:1;overflow:auto;padding:16px}
+.msg{max-width:72%;padding:9px 12px;margin-bottom:10px;border-radius:12px;position:relative}
+.msg.me{background:#333;color:#fff;margin-left:auto}.msg.other{background:#fff;border:1px solid #ddd}
+.reply-preview{font-size:12px;opacity:.8;border-left:3px solid #999;padding-left:6px;margin-bottom:4px}
+.composer{display:flex;padding:10px;background:#fff;border-top:1px solid #ddd}.composer input{flex:1;padding:12px}.composer button{width:64px}
+.reply-box{padding:8px 12px;background:#fff8db;border-top:1px solid #edd585}.hidden{display:none}
+.form{max-width:420px;margin:10vh auto;background:#fff;padding:20px;border-radius:14px}.form input,.form button{width:100%;padding:10px;margin:6px 0}.error{background:#ffd6d6;padding:8px;border-radius:8px}
+.admin-page{max-width:900px;margin:20px auto;background:#fff;padding:18px;border-radius:12px}.admin-page section{margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid #eee}
+@media (max-width:768px){.layout{flex-direction:column}.sidebar{width:100%;border-right:none;border-bottom:1px solid #ddd}.msg{max-width:88%}}
